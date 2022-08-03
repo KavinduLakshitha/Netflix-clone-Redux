@@ -11,7 +11,7 @@ function Banner() {
       const request = await axios.get(requests.fetchNetflixOriginals);
       setMovie(
         request.data.results[
-          Math.floor(Math.random() * request.data.results.length - 1)
+          Math.floor(Math.random() * request.data.results.length)
         ]
       );
       return request;
@@ -29,7 +29,7 @@ function Banner() {
     <header
       className="banner"
       style={{
-        backgroundSize: "cover",
+        backgroundSize:"cover",
         backgroundImage: `url('https://image.tmdb.org/t/p/original/${movie?.backdrop_path}')`,
         backgroundPosition: "center center",
       }}

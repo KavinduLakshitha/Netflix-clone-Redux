@@ -1,14 +1,11 @@
 .banner{
-    position: relative;
-    height: 448px;
     color: #fff;
-    object-fit: contain;
 }
 
 .banner_contents {
     margin-left: 30px;
-    padding-top: 140px;
-    height: 190px;
+    padding-top: 450px;
+    height:190px;    
 }
 
 .banner_title{
