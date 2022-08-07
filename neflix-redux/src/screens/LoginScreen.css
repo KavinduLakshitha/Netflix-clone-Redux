@@ -43,7 +43,6 @@
 
 .loginScreen_body {
     position: absolute;
-    
     top: 30%;
     z-index: 1;
     color: #fff;
@@ -54,27 +53,69 @@
     padding: 20px;
     left: 0;
     right: 0;
+
 }
 
 .loginScreen_body > h1 {
-    font-size: 3.125rem;
+    font-size: 3rem;
     margin-bottom: 20px;
+    animation: 1s ease-in-out 0s 1 slideInFromTop;
 }
 
 .loginScreen_body > h2 {
     font-size: 2rem;
     font-weight: 400;
     margin-bottom: 30px;
+    animation: 1s ease-in-out 0s 1 slideInFromLeft;
+    
 }
 
 .loginScreen_body > h3 {
     font-size: 1.3rem;
-    font-weight: 400;    
+    font-weight: 200;
+    animation: 1s ease-in-out 0s 1 slideInFromRight;    
 }
 
 .loginScreen_input {
     margin: 20px;
 }
+
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-1000%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(1000%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
 
 .loginScreen_input > form > input {    
 
@@ -90,6 +131,8 @@
     outline: none;
     font-family: sans-serif;
     color: #fff;
+    animation: 1s ease-in-out 0s 1 slideInFromBottom; 
+    
 }
 
 .loginScreen_getStarted {
@@ -104,4 +147,5 @@
     background-color: #e50913;
     color: white;
     cursor: pointer;
+    animation: 1s ease-in-out 0s 1 slideInFromBottom;
 }

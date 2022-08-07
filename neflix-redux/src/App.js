@@ -7,6 +7,7 @@ import ProfileScreen from "./screens/ProfileScreen";
 import { auth } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
+import { Helmet } from "react-helmet";
 
 function App() {
   const user = useSelector(selectUser);
@@ -32,6 +33,12 @@ function App() {
 
   return (
     <div className="app">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Netflix-ish</title>
+        <link rel="canonical" href="/" />
+      </Helmet>
+
       <BrowserRouter>
         {!user ? (
           <LoginScreen />
